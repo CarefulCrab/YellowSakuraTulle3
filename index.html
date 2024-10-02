@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy to Clipboard</title>
+  <script>
+    // Function to copy text to clipboard and close the window
+    function copyToClipboard() {
+      const textToCopy = 'Yellow Sakura Tulle'; // Define the text you want to copy
+      navigator.clipboard.writeText(textToCopy).then(() => {
+        alert('Text copied to clipboard: ' + textToCopy);
+        window.close(); // Close the page after copying
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    }
+
+    // Execute the function when the page is fully loaded
+    window.onload = copyToClipboard;
+  </script>
+</head>
+<body>
+</body>
+</html>
